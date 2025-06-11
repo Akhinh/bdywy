@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Love</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #ffe0ec);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #ff99cc;
+      color: white;
+      padding: 20px 10px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    p {
+      font-size: 1.2em;
+      margin: 10px 20px;
+    }
+    .slideshow {
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .slides {
+      display: flex;
+      animation: slide 16s infinite;
+    }
+    .slides img {
+      width: 100%;
+      height: auto;
+    }
+    @keyframes slide {
+      0% { transform: translateX(0%); }
+      25% { transform: translateX(-100%); }
+      50% { transform: translateX(-200%); }
+      75% { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+    footer {
+      background: #fff0f5;
+      padding: 20px;
+      font-size: 1em;
+      margin-top: 40px;
+    }
+
+    .emoji {
+      position: fixed;
+      bottom: -40px;
+      font-size: 2rem;
+      animation: floatUp 4s linear forwards;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio id="bg-music" autoplay muted loop>
+    <source src="https://files.ceenaija.com/wp-content/uploads/music/2022/08/Celine_Dion_-_The_Power_Of_Love_CeeNaija.com_.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Unmute music on first interaction
+    document.addEventListener('click', function () {
+      const music = document.getElementById('bg-music');
+      music.muted = false;
+      music.play();
+    }, { once: true });
+
+    // Floating emoji effect
+    const emojis = ['❤️', '🎂', '💖', '🥰', '💐'];
+
+    function createFloatingEmoji() {
+      const emoji = document.createElement('div');
+      emoji.classList.add('emoji');
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+      emoji.style.left = Math.random() * 100 + 'vw';
+      emoji.style.fontSize = (Math.random() * 1.5 + 1.2) + 'rem';
+
+      document.body.appendChild(emoji);
+
+      setTimeout(() => {
+        emoji.remove();
+      }, 4000);
+    }
+
+    window.addEventListener('scroll', () => {
+      const count = Math.floor(Math.random() * 3) + 1;
+      for (let i = 0; i < count; i++) {
+        createFloatingEmoji();
+      }
+    });
+  </script>
+
+  <header>
+    <h1>Happy Birthday, My Love, The One And Only Oyeyinka Ebunu Trust!!</h1>
+    <p>Today we celebrate the most beautiful soul in my life.</p>
+  </header>
+
+  <div class="slideshow">
+    <div class="slides">
+      <img src="https://i.postimg.cc/vBtFDPfn/1Q2A2879.jpg" alt="Love image 1">
+      <img src="https://i.postimg.cc/fR3XMYZD/1Q2A2842.jpg" alt="Love image 2">
+      <img src="https://i.postimg.cc/MZddTbkQ/1Q2A3332.jpg" alt="Love image 3">
+      <img src="https://i.postimg.cc/3x1vC7hf/1Q2A3604.jpg" alt="Love image 4">
+    </div>
+  </div>
+
+  <section>
+    <p>
+      Every day with you is a gift, but today is extra special. On this day, the world received a treasure, and I received the love of my life. 💖
+    </p>
+    <p>
+      Your laughter fills our home with light, and your strength holds our family together. We are so lucky to have you.
+    </p>
+    <p>
+      I love you more than words can say. Here's to many more birthdays together. 🎂❤️
+    </p>
+  </section>
+  <br></br>
+  <section>
+    <p>
+      "Whenever you reach for me, I’m gonna do all that I can, We’re heading for something, Somewhere I’ve never been, Sometimes I am frightened but I’m ready to learn."
+    </p>
+  </section>
+
+  <footer>
+    <p>With all my love, forever. – Your Husband, Oyeyinka A.I💕</p>
+  </footer>
+</body>
+</html>
